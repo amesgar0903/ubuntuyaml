@@ -1,0 +1,24 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: es_ES.UTF-8
+  keyboard:
+    layout: es
+    variant: ""
+  timezone: Europe/Madrid
+
+  identity:
+    hostname: usuario
+    username: usuario
+    password: "$6$fbX8p2x3m5Z1Q8v9qC8mJ6sYQ9rQ3xLk2ZbO4Fe9fgH8JQkL2m4p6fQrS8tU8VvX2y4A6cB8dE9fG2hI4jK6lM8n0p"
+
+  storage:
+    layout:
+      name: direct
+
+  packages:
+    - curl
+    - wget
+    - git
+
+  shutdown: poweroff
